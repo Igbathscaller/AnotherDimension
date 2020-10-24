@@ -49,7 +49,17 @@ public class ArrayOps{
         return output;
     }
 
-    /* public static boolean isRowMagic(int[][] matrix){
-        return True
-    } */
+    public static boolean isRowMagic(int[][] matrix){
+        int[] a = sumRows(matrix);
+        return largest(a)*a.length==sum(matrix);
+    }
+
+    public static boolean isColMagic(int[][] matrix){
+        int[] a = sumRows(matrix);
+        return largest(a)*a.length==sum(matrix);
+    }
+
+    public static boolean isLocationMagic(int[][] matrix, int row, int col){
+        return sum(matrix[row])== sumCols(matrix)[col];
+    }
 }
