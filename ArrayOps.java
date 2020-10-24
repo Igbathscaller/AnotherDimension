@@ -55,7 +55,7 @@ public class ArrayOps{
     }
 
     public static boolean isColMagic(int[][] matrix){
-        int[] a = sumRows(matrix);
+        int[] a = sumCols(matrix);
         return largest(a)*a.length==sum(matrix);
     }
 
