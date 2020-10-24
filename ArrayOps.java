@@ -34,4 +34,22 @@ public class ArrayOps{
     public static int sum(int[][] arr){
         return sum(sumRows(arr));
     }
+
+    public static int[] sumCols(int[][] matrix){
+        int col = matrix[0].length;
+        int[]output = new int[col];
+        int sum;
+        for(int c =0; c<col; c++){
+            sum = 0;
+            for(int r=0; r<matrix.length; r++){
+                sum+=matrix[r][c];
+            }
+            output[c] = sum;
+        }
+        return output;
+    }
+
+    /* public static boolean isRowMagic(int[][] matrix){
+        return True
+    } */
 }
