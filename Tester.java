@@ -15,14 +15,19 @@ public class Tester{
         System.out.println("expected output:9");
         System.out.println( ArrayOps.sum(A));   //this calls the overloaded 2d array version!
         System.out.println("expected output:6");
+        System.out.println( Arrays.toString(ArrayOps.sumCols(A)) + "\nexpected output:[3, -4, 16, -9]");   //A from the earlier example
         A = new int[][]{ {  1,  2, 3, 4 }, {  2, 3,  4,  1 },{ 3, 4,  1, 2 } };  //this is rowMagic but NOT colMagic
-            System.out.println(ArrayOps.isRowMagic(A));
-            System.out.println(ArrayOps.isColMagic(A));
+        System.out.println(ArrayOps.isRowMagic(A));
+        System.out.println(ArrayOps.isColMagic(A));
         A=  new int[][]{ {  1,  1, 1 },{  2, 2, 2 },{ 3,  3, 3 } };  //this is colMagic but NOT rowMagic
         System.out.println(ArrayOps.isRowMagic(A));
         System.out.println(ArrayOps.isColMagic(A));
         A=  new int[][]{  {  2,  2, 2 },{  2, 2, 2 } };  //this is both colMagic AND rowMagic
         System.out.println(ArrayOps.isRowMagic(A));
         System.out.println(ArrayOps.isColMagic(A));
+        int[][]E = { {  2,  4, 2 }, {  2, 2, 2 } }; 
+        System.out.println(ArrayOps.isLocationMagic(E, 0, 1) + " is False");
+        System.out.println(ArrayOps.isLocationMagic(E, 1, 1) +  " is True");
+
     }
 }
