@@ -15,5 +15,14 @@ public class Tester{
         System.out.println("expected output:9");
         System.out.println( ArrayOps.sum(A));   //this calls the overloaded 2d array version!
         System.out.println("expected output:6");
+        A = new int[][]{ {  1,  2, 3, 4 }, {  2, 3,  4,  1 },{ 3, 4,  1, 2 } };  //this is rowMagic but NOT colMagic
+            System.out.println(ArrayOps.isRowMagic(A));
+            System.out.println(ArrayOps.isColMagic(A));
+        A=  new int[][]{ {  1,  1, 1 },{  2, 2, 2 },{ 3,  3, 3 } };  //this is colMagic but NOT rowMagic
+        System.out.println(ArrayOps.isRowMagic(A));
+        System.out.println(ArrayOps.isColMagic(A));
+        A=  new int[][]{  {  2,  2, 2 },{  2, 2, 2 } };  //this is both colMagic AND rowMagic
+        System.out.println(ArrayOps.isRowMagic(A));
+        System.out.println(ArrayOps.isColMagic(A));
     }
 }
