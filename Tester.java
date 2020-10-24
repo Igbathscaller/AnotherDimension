@@ -28,6 +28,13 @@ public class Tester{
         int[][]E = { {  2,  4, 2 }, {  2, 2, 2 } }; 
         System.out.println(ArrayOps.isLocationMagic(E, 0, 1) + " is False");
         System.out.println(ArrayOps.isLocationMagic(E, 1, 1) +  " is True");
-
+        System.out.println(ArrayOps.sum(B));
+        System.out.println(ArrayOps.largest(B));
+        System.out.println(ArrayOps.largestInRows(A));
+        System.out.println(ArrayOps.sum(A)); 
+        System.out.println(ArrayOps.sumCols(A));
+        System.out.println(ArrayOps.isRowMagic(A));
+        System.out.println(ArrayOps.isColMagic(A)); 
+        System.out.println(ArrayOps.isLocationMagic(A, 0, 0));
     }
 }
